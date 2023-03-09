@@ -381,6 +381,7 @@ header {
 }
 .projects-link {
   transition: box-shadow var(--transition-dur-and-func);
+  display: block;
 }
 .projects-link:hover,
 .projects-link:focus {
@@ -400,6 +401,30 @@ header {
 }
 .projects-text {
   color: var(--main-text-color);
+}
+.projects-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transform: translate(0, 100%);
+  transition: transform var(--transition-dur-and-func);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px 0;
+  background-color: #4d5ae5;
+}
+.projects-link:hover .overlay,
+.projects-link:focus .overlay {
+  transform: translate(0, 0);
 }
 
 /* ======== FOOTER ========*/
